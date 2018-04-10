@@ -130,7 +130,7 @@ function movieThis(movieName){
 	    //console.log(movieID);
 
 	    //Create new query using the movie ID
-	    var queryURL = "https://api.themoviedb.org/3/movie/" + movieID + "?api_key=" + omdbKey + "&append_to_response=credits,releases";
+	    var queryURL = "http://www.omdbapi.com/?t=" + movieName + "&y=&plot=full&tomatoes=true&apikey=trilogy";
 
 	    request(queryURL, function(error, response, body) {
 	    	var movieObj = JSON.parse(body);
