@@ -18,7 +18,7 @@ var defaultSong = "The Sign";
 
 
 var twitterKeys = keys.twitterKeys;
-var tmdbKey = keys.tmdbKey;
+var omdbKey = keys.omdbKey;
 
 var client = new Twitter({
   consumer_key: twitterKeys.consumer_key,
@@ -118,7 +118,7 @@ function movieThis(movieName){
 
 	console.log(movieName);
 
-	request("https://api.themoviedb.org/3/search/movie?api_key=" + tmdbKey + "&query=" + movieName, function(error, response, body) {
+	request("https://api.themoviedb.org/3/search/movie?api_key=" + omdbKey + "&query=" + movieName, function(error, response, body) {
 
   	// If there were no errors and the response code was 200 (i.e. the request was successful)...
   	if (!error && response.statusCode === 200) {
@@ -130,7 +130,7 @@ function movieThis(movieName){
 	    //console.log(movieID);
 
 	    //Create new query using the movie ID
-	    var queryURL = "https://api.themoviedb.org/3/movie/" + movieID + "?api_key=" + tmdbKey + "&append_to_response=credits,releases";
+	    var queryURL = "https://api.themoviedb.org/3/movie/" + movieID + "?api_key=" + omdbKey + "&append_to_response=credits,releases";
 
 	    request(queryURL, function(error, response, body) {
 	    	var movieObj = JSON.parse(body);

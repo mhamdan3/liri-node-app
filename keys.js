@@ -7,7 +7,7 @@ exports.twitterKeys = {
   access_token_secret: 'YfNwvPYVDc9PFtQLBsE83dT150D2UpJjdpKgIJTDu7WVo',
 }
 
-exports.tmdbKey = '677a1dec';
+exports.omdbKey = '677a1dec';
 
 exports.spotify = {
   id: '433a166b08604cd69e1952aea0e1caff',
